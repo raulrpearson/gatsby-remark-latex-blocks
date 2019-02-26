@@ -1,0 +1,28 @@
+{
+  "name": "gatsby-remark-latex-blocks",
+  "description": "Processes LaTeX code blocks and renders to SVG using dvisvgm",
+  "version": "0.1.0",
+  "author": "Raúl R Pearson <raulrpearson@protonmail.com>",
+  "bugs": {
+    "url": "https://github.com/raulrpearson/gatsby-remark-latex-blocks/issues"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "unist-util-visit": "^1.4.0"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "markdown",
+    "remark",
+    "latex",
+    "tikz",
+    "graphs"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "repository": "https://github.com/raulrpearson/gatsby-remark-latex-blocks"
+}
