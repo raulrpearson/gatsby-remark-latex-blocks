@@ -9,7 +9,7 @@ module.exports = async ({ markdownAST }, pluginOptions = {}) => {
 
   visit(markdownAST, `code`, node => {
     for (lang of validLanguages) {
-      if (node.lang.startsWith(lang)) {
+      if (node.lang && node.lang.startsWith(lang)) {
         const chunks = node.lang.match(/^(?<lang>\S+)(\s+(?<attrString>.+))?/);
         node.lang = chunks.groups.lang;
         latexNodes.push({ node, attrString: chunks.groups.attrString });

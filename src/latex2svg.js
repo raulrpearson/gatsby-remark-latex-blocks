@@ -4,8 +4,8 @@ exports.latex2svg = async function(latexString) {
   const latex = spawn('latex', {
     stdio: ['pipe', 'ignore', 'ignore']
   });
-
   streamWrite(latex.stdin, latexString);
+  latex.stdin.end();
   await onExit(latex);
 
   const dvisvgm = spawn(
